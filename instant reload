@@ -9,16 +9,3 @@ for i, v in pairs(getgc(true)) do
           end
      end
 })
-
-playerSection.Toggle({
-     Text = "Auto Sprint",
-     Callback = function (value) 
-          game:GetService("RunService").Stepped:Connect(function()
-               if value then
-                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
-               else
-                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-               end
-          end)
-     end
-})
